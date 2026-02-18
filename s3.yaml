@@ -12,6 +12,18 @@ Resources:
       Tags:
         - Key: 'Environment'
           Value: 'Production'
+      LifecyleConfiguration:
+        Rules:
+          - Id: 'ExpireOldObjects'
+            Status: 'Enabled'
+            Prefix: ""
+            Transitions:
+              - StorageClass: 'STANDARD_IA'
+                TransitionInDays: 30
+              - StorageClass: 'GLACIER'
+                TransitionInDays: 90  
+                StorageClass: 'DEEP_ARCHIVE'
+                TransitionInDays: 180
 Outputs:
   S3BucketName:
     Description: 'Name of the S3 Bucket'
