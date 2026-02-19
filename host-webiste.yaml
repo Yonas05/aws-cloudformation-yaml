@@ -23,4 +23,8 @@ Resources:
           - Effect: 'Allow'
             Principal: '*'
             Action: 's3:GetObject'
-            Resource: !Sub 'arn:aws:s3:::${MyS3Bucket}/*'        
+            Resource: !Sub 'arn:aws:s3:::${MyS3Bucket}/*'
+Outputs:
+  WebsiteURL:
+    Description: 'URL of the hosted website'
+    Value: !GetAtt MyS3Bucket.WebsiteURL          
