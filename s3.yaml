@@ -24,6 +24,11 @@ Resources:
                 TransitionInDays: 90  
                 StorageClass: 'DEEP_ARCHIVE'
                 TransitionInDays: 180
+      publicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
 Outputs:
   S3BucketName:
     Description: 'Name of the S3 Bucket'
