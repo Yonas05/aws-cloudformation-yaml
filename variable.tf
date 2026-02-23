@@ -10,3 +10,16 @@ variable "instance_type" {
     default     = "t3.micro"
   
 }
+
+variable "private_instance" {
+  type = string
+  description = "private instance for database server"
+  default = "database_server"
+  
+}
+variable "instance_private_type" {
+  description = "The type of EC2 instance to create for database server."
+  type        = string
+  default     = "t3.micro"
+  
+}
