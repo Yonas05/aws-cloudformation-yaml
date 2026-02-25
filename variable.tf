@@ -23,3 +23,25 @@ variable "instance_private_type" {
   default     = "t3.micro"
   
 }
+variable "region" {
+  type = string
+  description = "AWS region to deploy resources"
+
+  
+}
+variable "demo_vpc_a_cidr" {
+  description = "CIDR block for the first VPC"
+  type        = string
+}
+variable "demo_vpc_b_cidr" {
+  description = "CIDR block for the second VPC"
+  type        = string
+} 
+variable "demo_subnet_a_cidr" {
+  description = "CIDR block for the first subnet"
+  type        = string
+}
+variable "demo_subnet_b_cidr" {
+  description = "CIDR block for the second subnet"
+  type        = string
+}

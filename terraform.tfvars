@@ -1,0 +1,5 @@
+region = "eu-west-1"
+demo_vpc_a_cidr = "10.0.0.0/16"
+demo_vpc_b_cidr = "10.1.0.0/16"
+demo_subnet_a_cidr = "10.0.1.0/24"
+demo_subnet_b_cidr = "10.1.1.0/24"
